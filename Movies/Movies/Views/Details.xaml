@@ -20,32 +20,59 @@
     <ScrollView VerticalScrollBarVisibility="Never" Orientation="Both" Padding="0" BackgroundColor="#2C2B30">
         <RelativeLayout>
             <StackLayout>
-                <Label HorizontalOptions="Center" Style="{StaticResource title}" FontSize="25" Text="FILMS" Margin="0,20,0,0"></Label>
                 <FlexLayout BindableLayout.ItemsSource="{Binding Movie}" Wrap="Wrap" Direction="Row">
                     <BindableLayout.ItemTemplate>
                         <DataTemplate x:DataType="m:Movie">
                             <StackLayout Margin="0,0,0,15">
-                                <Frame HeightRequest="200" Margin="10,10,10,0" CornerRadius="8" Padding="0" BackgroundColor="#1A1A1A">
+                                <Frame HeightRequest="200" Margin="10,10,10,0" CornerRadius="8" Padding="0" BackgroundColor="#2C2B30">
                                     <FlexLayout Direction="Row">
-                                        <Grid RowSpacing="0">
-                                            <StackLayout Orientation="Horizontal">
-                                                <Image Opacity="1" Grid.Row="0" Grid.Column="0" Source="{Binding image}" Aspect="AspectFill" WidthRequest="100" />
-                                                <StackLayout Orientation="Vertical">
-                                                    <Label Style="{StaticResource frameTitle}" Text="{Binding titre}" Margin="20,10,0,0" FontSize="20"></Label>
-                                                    <Frame Padding="10,0,10,0" HorizontalOptions="Start" CornerRadius="15" Margin="20,10,0,0" BackgroundColor="Gray">
-                                                        <Label Style="{StaticResource frameTitle}" Text="{Binding categorie}" FontSize="12"></Label>
-                                                    </Frame>
-                                                    <StackLayout Orientation="Horizontal">
-                                                        <Label Style="{StaticResource frameTitle}" Grid.Row="0" Grid.Column="0" Text="{Binding note}" Margin="30,0,0,0" FontSize="12"></Label>
-                                                        <Image Opacity="1" Source="https://cdn-icons-png.flaticon.com/512/2107/2107957.png" WidthRequest="10" />
-                                                    </StackLayout>
-                                                    <Label Style="{StaticResource frameTitle}" Text="{Binding langage}" Margin="30,0,0,0" FontSize="12"></Label>
-                                                    <Label Style="{StaticResource frameTitle}" Text="{Binding longueur}" Margin="30,0,0,0" FontSize="12"></Label>
-                                                </StackLayout>
-                                            </StackLayout>
-                                        </Grid>
+                                        <WebView Source="{Binding video}" VerticalOptions='FillAndExpand' Margin="0,0,0,0"></WebView>
                                     </FlexLayout>
                                 </Frame>
+                                <FlexLayout Direction="Row">
+                                    <Grid RowSpacing="0">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Image Opacity="1" Grid.Row="0" Grid.Column="0" Source="{Binding image}" Aspect="AspectFill" WidthRequest="100" />
+                                            <StackLayout Orientation="Vertical">
+                                                <Label Style="{StaticResource frameTitle}" Text="{Binding titre}" Margin="20,10,0,0" FontSize="20"></Label>
+                                                <Frame Padding="10,0,10,0" HorizontalOptions="Start" CornerRadius="15" Margin="20,10,0,0" BackgroundColor="Gray">
+                                                    <Label Style="{StaticResource frameTitle}" Text="{Binding categorie}" FontSize="12"></Label>
+                                                </Frame>
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Label Style="{StaticResource frameTitle}" Grid.Row="0" Grid.Column="0" Text="{Binding note}" Margin="30,0,0,0" FontSize="12"></Label>
+                                                    <Image Opacity="1" Source="https://cdn-icons-png.flaticon.com/512/2107/2107957.png" WidthRequest="10" />
+                                                </StackLayout>
+                                                <Label Style="{StaticResource frameTitle}" Text="{Binding langage}" Margin="30,0,0,0" FontSize="12"></Label>
+                                                <Label Style="{StaticResource frameTitle}" Text="{Binding longueur}" Margin="30,0,0,0" FontSize="12"></Label>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Grid>
+                                </FlexLayout>
+                                <FlexLayout Direction="Column">
+                                    <Grid RowSpacing="0">
+                                        <StackLayout Orientation="Vertical">
+                                            <StackLayout Orientation="Horizontal">
+                                                <StackLayout Orientation="Vertical" Margin="20,20,0,0" HorizontalOptions="Start">
+                                                    <Label Style="{StaticResource frameTitle}" Text="Playing Date : " FontAttributes="Bold" FontSize="12"></Label>
+                                                    <Label Style="{StaticResource frameTitle}" Grid.Row="0" Grid.Column="0" Text="{Binding playing_date}"  FontSize="12"></Label>
+                                                </StackLayout>
+                                                <StackLayout Orientation="Vertical" Margin="20,20,0,0">
+                                                    <Label Style="{StaticResource frameTitle}" Text="Playing Time : " FontAttributes="Bold" FontSize="12"></Label>
+                                                    <Label Style="{StaticResource frameTitle}" Grid.Row="0" Grid.Column="0" Text="{Binding playing_time}"  FontSize="12"></Label>
+                                                </StackLayout>
+
+                                            </StackLayout>
+                                            <StackLayout Orientation="Vertical" Margin="20,20,0,0">
+                                                <Label Style="{StaticResource frameTitle}" Text="Ticket Price : " FontAttributes="Bold" FontSize="12"></Label>
+                                                <Label Style="{StaticResource frameTitle}" Grid.Row="0" Grid.Column="0" Text="{Binding ticket_price}"  FontSize="12"></Label>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Vertical" Margin="20,20,0,0">
+                                                <Label Style="{StaticResource frameTitle}" Text="Description " FontAttributes="Bold" FontSize="12"></Label>
+                                                <Label Style="{StaticResource frameTitle}" Grid.Row="0" Grid.Column="0" Text="{Binding description}"  FontSize="12"></Label>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Grid>
+                                </FlexLayout>
                             </StackLayout>
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
