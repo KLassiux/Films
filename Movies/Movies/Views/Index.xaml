@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.Views.Index"
+             xmlns:m="clr-namespace:Movies.Model"
+             xmlns:vm="clr-namespace:Movies.ViewModel" x:DataType="vm:MoviesViewModel">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="title" TargetType="Label">
+                <Setter Property="TextColor" Value="#E3FFFC" />
+            </Style>
+            <Style x:Key="frameTitle" TargetType="Label">
+                <Setter Property="TextColor" Value="#E3FFFC" />
+                <Setter Property="FontSize" Value="13" />
+            </Style>
+            <Style x:Key="qty" TargetType="Label">
+                <Setter Property="TextColor" Value="#E3FFFC" />
+                <Setter Property="FontSize" Value="10" />
+            </Style>
+            <Style x:Key="catTitle" TargetType="Label">
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="TextColor" Value="#E3FFFC" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView VerticalScrollBarVisibility="Never" Orientation="Both" Padding="0" BackgroundColor="#2C2B30">
+        <RelativeLayout>
+            <StackLayout>
+                <Label HorizontalOptions="Center" Style="{StaticResource title}" FontSize="25" Text="FILMS" Margin="0,20,0,0"></Label>
+                <FlexLayout BindableLayout.ItemsSource="{Binding Movies}" Wrap="Wrap" Direction="Row">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="m:Movie">
+                            <StackLayout Margin="0,0,0,15">
+                                <Frame HeightRequest="150" Margin="10,10,10,0" CornerRadius="8" Padding="0">
+                                    <FlexLayout Direction="Column">
+                                        <Grid RowSpacing="0">
+                                            <Image Opacity="1" Grid.Row="0" Grid.Column="0" Source="{Binding image}" Aspect="AspectFill" HeightRequest="250" />
+                                        </Grid>
+                                    </FlexLayout>
+                                </Frame>
+                                <Label Style="{StaticResource frameTitle}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" Text="{Binding titre}" Margin="0,0,0,-10"></Label>
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </FlexLayout>
+            </StackLayout>
+        </RelativeLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,16 @@
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\obj\Debug\netstandard2.0\Movies.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\obj\Debug\netstandard2.0\Views\Index.xaml.g.cs
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\obj\Debug\netstandard2.0\Movies.AssemblyInfoInputs.cache
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\obj\Debug\netstandard2.0\Movies.AssemblyInfo.cs
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\obj\Debug\netstandard2.0\Movies.csproj.CoreCompileInputs.cache
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\obj\Debug\netstandard2.0\Movies.dll
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\obj\Debug\netstandard2.0\ref\Movies.dll
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\obj\Debug\netstandard2.0\Movies.pdb
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\bin\Debug\netstandard2.0\Movies.deps.json
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\bin\Debug\netstandard2.0\Movies.dll
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\bin\Debug\netstandard2.0\ref\Movies.dll
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\bin\Debug\netstandard2.0\Movies.pdb
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\obj\Debug\netstandard2.0\Movies.csproj.AssemblyReference.cache
