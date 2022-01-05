@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Movies.Model
 {
-    class Movie
+    public class Movie
     {
         public int id_F { get; set; }
         public string titre { get; set; }

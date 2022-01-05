@@ -2,10 +2,12 @@
 using Movies.Model;
 using MvvmHelpers;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
-using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace Movies.ViewModel
 {
@@ -26,6 +28,7 @@ namespace Movies.ViewModel
               .Child("Film")
               .OnceAsync<Movie>()).Select(item => new Movie
               {
+                  id_F = item.Object.id_F,
                   titre = item.Object.titre,
                   categorie = item.Object.categorie,
                   note = item.Object.note,
@@ -43,7 +46,6 @@ namespace Movies.ViewModel
             {
                 Movies.Add(item);
             }
-
         }
 
         private ObservableCollection<Movie> movies;

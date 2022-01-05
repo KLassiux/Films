@@ -1,6 +1,8 @@
-﻿using Movies.ViewModel;
+﻿using Movies.Model;
+using Movies.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +19,12 @@ namespace Movies.Views
         {
             InitializeComponent();
             BindingContext = new MoviesViewModel();
+        }
+        private void GetMovieCommand(object sender, EventArgs e)
+        {
+            Movie unMovie = (Movie)((TappedEventArgs)e).Parameter;
+            Debug.WriteLine(unMovie);
+            Navigation.PushAsync(new Details(unMovie));
         }
     }
 }
