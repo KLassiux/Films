@@ -16,7 +16,6 @@ namespace Movies.ViewModel
         private void GetMovie(Movie unMovie)
         {
             Movie = new ObservableCollection<Movie>();
-
             Movie.Add(unMovie);
         }
 

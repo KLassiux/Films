@@ -14,3 +14,4 @@ C:\Users\Pierre\source\repos\Movies\Movies\Movies\bin\Debug\netstandard2.0\ref\M
 C:\Users\Pierre\source\repos\Movies\Movies\Movies\bin\Debug\netstandard2.0\Movies.pdb
 C:\Users\Pierre\source\repos\Movies\Movies\Movies\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Pierre\source\repos\Movies\Movies\Movies\obj\Debug\netstandard2.0\Movies.csproj.AssemblyReference.cache
+C:\Users\Pierre\source\repos\Movies\Movies\Movies\obj\Debug\netstandard2.0\Views\Details.xaml.g.cs
